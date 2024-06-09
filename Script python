@@ -1,0 +1,24 @@
+import random
+
+# Daftar pesan yang akan dipilih secara acak
+pesan = [
+    "Halo! Apa kabar?",
+    "Hai! Ada yang bisa saya bantu?",
+    "Selamat datang! Ada yang bisa saya lakukan untukmu?",
+    "Hai! Bagaimana hari Anda?",
+    "Halo! Saya di sini untuk membantu Anda."
+]
+
+# Fungsi untuk membalas pesan secara acak
+def balas_pesan():
+    return random.choice(pesan)
+
+# Program utama
+if __name__ == "__main__":
+    while True:
+        input_user = input("Anda: ")
+        if input_user.lower() == "exit":
+            print("Sampai jumpa!")
+            break
+        else:
+            print("AI:", balas_pesan())
